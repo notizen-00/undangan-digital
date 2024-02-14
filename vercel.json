@@ -44,7 +44,7 @@
         }
       }
     ],
-    "builds": [
+    "build": [
         {
           "src": "vercel-build.js",
           "use": "@vercel/node"
