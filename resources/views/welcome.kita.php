@@ -8,7 +8,7 @@
     <meta name="description" content="Kamu - PHP Framework">
     <meta name="theme-color" content="#ffffff">
     <meta name="color-scheme" content="light">
-    <title>Kamu - PHP Framework</title>
+    <title>RestFull API - PHP Framework</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('kamu.png') }}">
 </head>
@@ -16,7 +16,7 @@
 <body class="font-sans m-0 bg-gradient-to-br from-indigo-300 to-purple-400">
     <div class="flex h-screen justify-center items-center">
         <div class="text-slate-600 text-center bg-white p-8 rounded-xl drop-shadow-2xl">
-            <h1 class="inline font-medium text-4xl mr-1">Kamu</h1>
+            <h1 class="inline font-medium text-4xl mr-1">UCUP LOVE HILMY </h1>
             <p class="inline font-medium text-2xl">
                 {{ $data }}
             </p>
