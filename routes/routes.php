@@ -4,6 +4,7 @@ use App\Controllers\AuthController;
 use App\Controllers\CommentController;
 use App\Controllers\WelcomeController;
 use App\Middleware\AuthMiddleware;
+use App\Middleware\CorsMiddleware;
 use Core\Routing\Route;
 
 /**
@@ -27,7 +28,7 @@ Route::prefix('/api')->group(function () {
         // Get and create comment
         Route::controller(CommentController::class)->group(function () {
             Route::get('/', 'get');
-            Route::post('/', 'create');
+            Route::post('/', 'create')->middleware(CorsMiddleware::class); 
         });
 
         Route::options('/'); // Preflight request [/api/comment]
