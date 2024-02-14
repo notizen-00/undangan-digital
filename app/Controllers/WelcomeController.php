@@ -7,17 +7,17 @@ use Core\Http\Request;
 use App\Models\User;
 class WelcomeController extends Controller
 {
-    public function __invoke(): \Core\View\View
-    {
+    // public function __invoke(): \Core\View\View
+    // {
         public function __invoke(): \Core\View\View
         {
             try {
                 // Attempt to fetch a user (or any other operation you'd like to perform)
-                $user = User::get();
-                
+                $user = User::first();
+                // dd($user);
                 // If the query is successful, pass data to the view
                 return $this->view('welcome', [
-                    'data' => 'UCUP LOVE HILMY'
+                    'data' => $user->nama
                 ]);
             } catch (\Exception $e) {
                 // If an exception is thrown (indicating a database connection issue), handle it
@@ -26,5 +26,5 @@ class WelcomeController extends Controller
                 ]);
             }
         }
-    }
+    // }
 }
