@@ -37,12 +37,8 @@
         },
         {
             "src": "/(.*)",
-            "dest": "/api/index.php",
-            "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
-            "headers": {
-              "Access-Control-Allow-Origin": "*"
-            }
-        
+            "dest": "/api/index.php"
+         
         }
     ]
 }
