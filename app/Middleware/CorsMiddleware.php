@@ -16,6 +16,7 @@ final class CorsMiddleware implements MiddlewareInterface
         }
 
         $header = respond()->getHeader();
+        // Set Access-Control-Allow-Origin header to allow all origins
         $header->set('Access-Control-Allow-Origin', '*');
 
         $vary = (!$header->has('Vary')) ? [] : explode(', ', $header->get('Vary'));
