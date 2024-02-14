@@ -19,6 +19,8 @@
             <h1 class="inline font-medium text-4xl mr-1">UCUP LOVE HILMY</h1>
             <p class="inline font-medium text-2xl">
                 {{ $data }}
+
+                {{ dd($check) }}
             </p>
             <small class="block mt-4" id="information"></small>
         </div>
