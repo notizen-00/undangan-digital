@@ -16,7 +16,7 @@
 <body class="font-sans m-0 bg-gradient-to-br from-indigo-300 to-purple-400">
     <div class="flex h-screen justify-center items-center">
         <div class="text-slate-600 text-center bg-white p-8 rounded-xl drop-shadow-2xl">
-            <h1 class="inline font-medium text-4xl mr-1">UCUP LOVE HILMY </h1>
+            <h1 class="inline font-medium text-4xl mr-1">UCUP LOVE HILMY</h1>
             <p class="inline font-medium text-2xl">
                 {{ $data }}
             </p>
