@@ -44,10 +44,11 @@
         }
       }
     ],
-    "build": {
-      "hooks": {
-        "postinstall": "php saya migrasi"
-      }
-    }
+    "builds": [
+        {
+          "src": "vercel-build.js",
+          "use": "@vercel/node"
+        }
+      ]
   }
   
