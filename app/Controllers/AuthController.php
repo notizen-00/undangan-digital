@@ -38,6 +38,7 @@ class AuthController extends Controller
 
         return $json->successOK([
             'token' => $token,
+            'id' => Auth::id(),
             'user' => Auth::user()->only(['nama', 'email'])
         ]);
     }
