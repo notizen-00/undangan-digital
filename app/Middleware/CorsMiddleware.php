@@ -40,7 +40,7 @@ final class CorsMiddleware implements MiddlewareInterface
 
         $header->set(
             'Access-Control-Allow-Headers',
-            $request->server->get('HTTP_ACCESS_CONTROL_REQUEST_HEADERS', 'Accept, Authorization, Content-Type, Origin, Token, User-Agent')
+            $request->server->get('HTTP_ACCESS_CONTROL_REQUEST_HEADERS', 'Accept, Authorization, Content-Type, Origin, Token, User-Agent,POST, OPTIONS,GET,PUT,DELETE')
         );
 
         return respond()->setCode(Respond::HTTP_NO_CONTENT);
