@@ -16,7 +16,6 @@ final class CorsMiddleware implements MiddlewareInterface
         }
 
         $header = respond()->getHeader();
-        // Set Access-Control-Allow-Origin header to allow all origins
         $header->set('Access-Control-Allow-Origin', '*');
 
         $vary = (!$header->has('Vary')) ? [] : explode(', ', $header->get('Vary'));
@@ -35,12 +34,12 @@ final class CorsMiddleware implements MiddlewareInterface
 
         $header->set(
             'Access-Control-Allow-Methods',
-            strtoupper($request->server->get('HTTP_ACCESS_CONTROL_REQUEST_METHOD', $request->method(),'GET,POST,DELETE,PUT,OPTIONS'))
+            strtoupper($request->server->get('HTTP_ACCESS_CONTROL_REQUEST_METHOD', $request->method()))
         );
 
         $header->set(
             'Access-Control-Allow-Headers',
-            $request->server->get('HTTP_ACCESS_CONTROL_REQUEST_HEADERS', 'Accept, Authorization, Content-Type, Origin, Token, User-Agent,POST, OPTIONS,GET,PUT,DELETE')
+            $request->server->get('HTTP_ACCESS_CONTROL_REQUEST_HEADERS', 'Accept, Authorization, Content-Type, Origin, Token, User-Agent')
         );
 
         return respond()->setCode(Respond::HTTP_NO_CONTENT);
