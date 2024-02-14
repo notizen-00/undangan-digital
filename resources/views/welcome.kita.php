@@ -30,7 +30,7 @@
     }
 ?>
             </p>
-            <small class="block mt-4" id="information"></small>
+            <small class="block mt-4" id="information">dgdg</small>
         </div>
     </div>
 
