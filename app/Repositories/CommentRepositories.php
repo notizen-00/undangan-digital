@@ -16,7 +16,10 @@ class CommentRepositories implements CommentContract
             'own' => Uuid::uuid4()->toString()
         ]);
     }
-
+    public function get():Model
+    {
+        return Comment::get();
+    }
     public function getAll(int $userid, int $limit, int $offset): Model
     {
         return Comment::with('comments')
