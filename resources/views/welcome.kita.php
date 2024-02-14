@@ -20,7 +20,15 @@
             <p class="inline font-medium text-2xl">
                 {{ $data }}
 
-                {{ dd($check) }}
+                <strong>Database Connected: </strong>
+<?php
+    try {
+        \DB::connection()->getPDO();
+        echo \DB::connection()->getDatabaseName();
+        } catch (\Exception $e) {
+        echo 'None';
+    }
+?>
             </p>
             <small class="block mt-4" id="information"></small>
         </div>
